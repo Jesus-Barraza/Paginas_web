@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículum Vítae - Juan Pérez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section {
+            margin-bottom: 35px;
+        }
+
+        section h2 {
+            font-size: 1.8em;
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        section h3 {
+            font-size: 1.3em;
+            color: #764ba2;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        section p {
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        article {
+            margin-bottom: 25px;
+            padding-left: 20px;
+            border-left: 4px solid #667eea;
+        }
+
+        article p:nth-of-type(2) {
+            color: #666;
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        section > ul > li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        section > ul > li:before {
+            content: "▸";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        article ul li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        article ul li:before {
+            content: "•";
+            color: #764ba2;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            border-top: 2px solid #667eea;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1em;
+            }
+
+            main {
+                margin: 15px;
+                padding: 25px;
+            }
+
+            section h2 {
+                font-size: 1.5em;
+            }
+
+            section h3 {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5em;
+            }
+
+            main {
+                padding: 15px;
+            }
+
+            section {
+                margin-bottom: 25px;
+            }
+
+            section h2 {
+                font-size: 1.3em;
+            }
+
+            section h3 {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Juan Pérez García</h1>
+        <p>Desarrollador Web Full Stack | Madrid, España</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Información de Contacto</h2>
+            <ul>
+                <li>Teléfono: +34 600 123 456</li>
+                <li>Correo Electrónico: juan.perez@email.com</li>
+                <li>LinkedIn: linkedin.com/in/juanperez</li>
+                <li>Sitio Web: www.juanperez.dev</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Resumen Profesional</h2>
+            <p>Desarrollador web con 5 años de experiencia en diseño y desarrollo de aplicaciones web. Especialista en JavaScript, React y Node.js. Apasionado por crear soluciones innovadoras y mantener buenas prácticas de programación.</p>
+        </section>
+
+        <section>
+            <h2>Experiencia Laboral</h2>
+            <article>
+                <h3>Desarrollador Web Senior</h3>
+                <p>TechSolutions Inc. | Madrid, España | Enero 2021 - Presente</p>
+                <ul>
+                    <li>Desarrollo de aplicaciones web usando React y Node.js</li>
+                    <li>Gestión de bases de datos con MongoDB y PostgreSQL</li>
+                    <li>Implementación de APIs RESTful</li>
+                    <li>Liderazgo de equipo de 3 desarrolladores</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Desarrollador Web Junior</h3>
+                <p>WebDev Studio | Barcelona, España | Junio 2019 - Diciembre 2020</p>
+                <ul>
+                    <li>Desarrollo frontend con HTML, CSS y JavaScript</li>
+                    <li>Mantenimiento de sitios web existentes</li>
+                    <li>Colaboración con diseñadores y otros desarrolladores</li>
+                    <li>Control de versiones con Git</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Practicante de Desarrollo Web</h3>
+                <p>DigitalAgency | Valencia, España | Enero 2019 - Mayo 2019</p>
+                <ul>
+                    <li>Soporte en desarrollo de sitios web responsivos</li>
+                    <li>Pruebas de calidad y debugging</li>
+                    <li>Documentación de proyectos</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Educación</h2>
+            <article>
+                <h3>Grado en Ingeniería Informática</h3>
+                <p>Universidad Autónoma de Madrid | Graduado en 2019</p>
+            </article>
+
+            <article>
+                <h3>Certificación en Desarrollo Web Full Stack</h3>
+                <p>Bootcamp Coding School | Completado en 2018</p>
+            </article>
+
+            <article>
+                <h3>Certificación en JavaScript Avanzado</h3>
+                <p>Plataforma Online Educativa | Completado en 2020</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+                <li><strong>Lenguajes:</strong> JavaScript, HTML5, CSS3, Python, SQL</li>
+                <li><strong>Frameworks:</strong> React, Node.js, Express</li>
+                <li><strong>Bases de Datos:</strong> MongoDB, PostgreSQL, MySQL</li>
+                <li><strong>Herramientas:</strong> Git, GitHub, VS Code, Docker</li>
+                <li><strong>Otros:</strong> REST APIs, Responsive Design, Testing</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Idiomas</h2>
+            <ul>
+                <li>Español: Nativo</li>
+                <li>Inglés: Avanzado (B2)</li>
+                <li>Francés: Básico (A2)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Proyectos Destacados</h2>
+            <article>
+                <h3>Plataforma de E-commerce</h3>
+                <p>Aplicación web completa desarrollada con React y Node.js. Incluye carrito de compras, procesamiento de pagos y panel de administración.</p>
+            </article>
+
+            <article>
+                <h3>Red Social de Viajes</h3>
+                <p>Aplicación social para compartir experiencias de viajes. Desarrollada con MERN Stack (MongoDB, Express, React, Node.js).</p>
+            </article>
+
+            <article>
+                <h3>Sistema de Gestión de Proyectos</h3>
+                <p>Herramienta colaborativa para gestionar proyectos en equipo con seguimiento de tareas y calendario integrado.</p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Certificaciones Adicionales</h2>
+            <ul>
+                <li>Certificación AWS Practitioner - Amazon Web Services</li>
+                <li>Scrum Master Certificate - Scrum Alliance</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Última actualización: Enero 2026</p>
+        <p>Referencias disponibles bajo solicitud</p>
+    </footer>
+</body>
+</html>
