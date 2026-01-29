@@ -1,0 +1,10 @@
+.holamundo {
+    color:red;
+    font-size: 50px;
+    background-color: aquamarine;
+    max-width: 600px;
+    text-align: center;
+    margin: 100px 300px;
+    border:green 30px solid;
+    padding: 50px;
+}
