@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #c1e5e9;
+}
+
+header {
+    background: linear-gradient(270deg, #96dbd4 0%, #0b4917 50%, #96dbd4 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 44px;
+    margin-bottom: 10 px;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 20px;
+    opacity: 0.9;
+}
+
+main {
+    max-width: 900;
+    margin: 30px 40px;
+    padding: 20px 10px;
+    background-color: azure;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section {
+    margin-bottom: 15px;
+    padding: 0px 15px;
+}
+
+section h2 {
+    font-size: 20px;
+    color: #07a5e9;
+    border-bottom: 3px solid #0491cc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section h3 {
+    font-size: 18px;
+    color:#0b4917;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+section p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+article {
+    margin-bottom: 25px;
+    padding-left: 20px;
+    border-left: 4px solid #66d0ea;
+}
+
+article p:nth-of-type {
+    color:#666;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    margin-left: 20px;
+}
+
+section > ul > li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+section > ul > li:before {
+    content: "·";
+    color:#0b4917;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+article > ul > li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+article > ul > li:before {
+    content: "»";
+    color: #0b4917;
+    font-weight: bold;
+    position: absolute;
+    left:0;
+}
+
+strong {
+    color: #0b4917;
+    font-weight: 600;
+}
+
+
+footer {
+    background-color: #f9f9f9;
+    border-top: 2px solid #39a31c;
+    padding: 20px;
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin-top: 40px;
+}
+
+footer p {
+    margin:5px 0;
+}

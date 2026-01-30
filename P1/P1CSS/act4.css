@@ -1,0 +1,37 @@
+p {
+    width: 200px;
+    height: 200px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    align-content: center;
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial;
+    font-weight: 600;
+}
+
+p.rojo {
+    background-color: red;
+    color:white;
+    margin-right: 600px;
+}
+
+p.verde {
+    background-color: green;
+    color:white;
+    margin-right: 400px;
+    margin-left:200px
+}
+
+p.azul {
+    background-color: blue;
+    color:white;
+    margin-right: 200px;
+    margin-left: 400px
+}
+
+p.amarillo {
+    background-color: yellow;
+    color:black;
+    margin-left:600px
+}

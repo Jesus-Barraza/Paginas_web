@@ -95,8 +95,8 @@ section > ul > li:before {
     font-weight: bold;
     position: absolute;
     left: 0;
+    
 }
-
 article ul li {
     margin-bottom: 8px;
     padding-left: 20px;
