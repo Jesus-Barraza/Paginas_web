@@ -1,0 +1,31 @@
+p {
+    padding: 0px;
+    margin: 0px;
+    width: 200px;
+    height: 200px;
+    color: white;
+    align-content: center;
+    text-align: center;
+}
+
+p.caja1 {
+    background-color: violet;
+    border-left: 200px solid aquamarine;
+    border-right: 400px solid aquamarine;
+}
+
+p.caja2 {
+    background-color: salmon;
+    border-left: 400px solid aquamarine;
+    border-right: 200px solid aquamarine;
+}
+
+p.caja3 {
+    background-color: chocolate;
+    border-right: 600px solid aquamarine;
+}
+
+p.caja4 {
+    background-color: goldenrod;
+    border-left: 600px solid aquamarine;
+}
