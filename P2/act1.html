@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora básica — P2</title>
+  <link rel="stylesheet" href="CSS/Act1.css">
+</head>
+<body>
+  <h1>Calculadora (uso simple)</h1>
+
+  <label>Primer número: <input id="n1" type="number" step="any"></label>
+  <br>
+  <label>Segundo número: <input id="n2" type="number" step="any"></label>
+  <br>
+  <label>Operación:
+    <select id="op">
+      <option value="sumar">Sumar</option>
+      <option value="restar">Restar</option>
+      <option value="multiplicar">Multiplicar</option>
+      <option value="dividir">Dividir</option>
+    </select>
+  </label>
+  <br>
+  <button id="calcBtn">Calcular</button>
+
+  <p>Resultado: <span id="result">—</span></p>
+
+  <script src="JS/Act1.js"></script>
+  <script>
+    document.getElementById('calcBtn').addEventListener('click', () => {
+      const n1v = parseFloat(document.getElementById('n1').value);
+      const n2v = parseFloat(document.getElementById('n2').value);
+      const op = document.getElementById('op').value;
+      const out = document.getElementById('result');
+
+      if (isNaN(n1v) || isNaN(n2v)) {
+        out.textContent = 'Entrada no válida';
+        return;
+      }
+
+      const calc = new Calculadora(n1v, n2v);
+      let res;
+      if (op === 'sumar') res = calc.sumar();
+      else if (op === 'restar') res = calc.restar();
+      else if (op === 'multiplicar') res = calc.multiplicar();
+      else if (op === 'dividir') res = calc.dividir();
+      out.textContent = res;
+    });
+  </script>
+</body>
+</html>
