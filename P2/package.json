@@ -4,6 +4,7 @@
   "description": "Materia de páginas web",
   "main": "index.js",
   "scripts": {
+    "run": "",
     "test": "jest"
   },
   "repository": {

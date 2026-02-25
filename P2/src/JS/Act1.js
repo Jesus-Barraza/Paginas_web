@@ -38,27 +38,42 @@ class Calculadora {
     }
 
     sumar() {
-        return this.#n1 + this.#n2;
+        if ((typeof this.#n1 !== "number") || (typeof this.#n2 !== "number")) {
+            return false
+        } else {
+            return this.#n1 + this.#n2;
+        }
     }
 
     restar() {
-        return this.#n1 - this.#n2;
+        if ((typeof this.#n1 !== "number") || (typeof this.#n2 !== "number")) {
+            return false
+        } else {
+            return this.#n1 - this.#n2;
+        }
     }
 
     multiplicar() {
-        return this.#n1 * this.#n2;
+        if ((typeof this.#n1 !== "number") || (typeof this.#n2 !== "number")) {
+            return false
+        } else {
+            return this.#n1 * this.#n2;
+        }
     }
 
     dividir() {
         if (this.#n2 === 0) {
             console.error("El resultado trasciende hasta el infinito (no se puede dividir entre 0)");
-            return 0
-        } else {
+            return false
+        } else if ((typeof this.#n1 == "number") || (typeof this.#n2 == "number")) {
             return this.#n1 / this.#n2;
+        } else {
+            return false
         }
     }
 }
 
+/*
 // Node-only CLI behaviour (run only when executed directly with Node)
 if (_isNode && typeof require !== 'undefined' && require.main === module) {
     let num1 = 6, num2 = 8;
@@ -109,3 +124,8 @@ if (typeof module !== 'undefined' && module.exports) {
 if (typeof window !== 'undefined') {
     window.Calculadora = Calculadora;
 } 
+*/ 
+// Export for Node (CommonJS) and expose to browser global
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = Calculadora;
+}
