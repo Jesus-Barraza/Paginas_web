@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Número Par</title>
+    <link rel="stylesheet" href="./css/Act2.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>¿Es Par?</h1>
+        <input type="number" id="numero" placeholder="Ingresa un número">
+        <button id="btnVerificar">Comprobar</button>
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script type="module">
+        import { act2 } from './JS/act2.js';
+
+        const boton = document.getElementById("btnVerificar");
+        const resultado = document.getElementById("resultado");
+
+        boton.addEventListener("click", () => {
+            const valor = document.getElementById("numero").value;
+
+            if (valor === "") {
+                resultado.textContent = "Ingresa un número válido";
+                resultado.className = "result false";
+                return;
+            }
+
+            const numero = Number(valor);
+            const esPar = act2(numero);
+
+            resultado.textContent = esPar;
+            resultado.className = esPar ? "result true" : "result false";
+        });
+    </script>
+
+</body>
+</html>

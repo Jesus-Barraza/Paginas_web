@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Verificador de Palíndromos</title>
+    <link rel="stylesheet" href="./css/Act3.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>¿Es Palíndromo?</h1>
+        <input type="text" id="texto" placeholder="Escribe una palabra o número">
+        <button id="btnVerificar">Comprobar</button>
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script type="module">
+        import { act3 } from './JS/act3.js';
+
+        const boton = document.getElementById("btnVerificar");
+        const resultado = document.getElementById("resultado");
+
+        boton.addEventListener("click", () => {
+
+            const valor = document.getElementById("texto").value;
+
+            if (valor.trim() === "") {
+                resultado.textContent = "Ingresa un texto válido";
+                resultado.className = "result false";
+                return;
+            }
+
+            const esPalindromo = act3(valor);
+
+            resultado.textContent = esPalindromo;
+            resultado.className = esPalindromo ? "result true" : "result false";
+
+        });
+    </script>
+
+</body>
+</html>
