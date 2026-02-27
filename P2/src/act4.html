@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordenador de Números</title>
+    <link rel="stylesheet" href="./css/act4.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Ordenar Números</h1>
+        <input type="text" id="lista" placeholder="Ej: 5, 3, 8, 1">
+        <button id="btnOrdenar">Ordenar</button>
+        <div id="resultado" class="result"></div>
+    </div>
+
+    <script type="module">
+        import { reacomodo } from './JS/act4.js';
+
+        const boton = document.getElementById("btnOrdenar");
+        const resultado = document.getElementById("resultado");
+
+        boton.addEventListener("click", () => {
+
+            const valor = document.getElementById("lista").value;
+
+            if (valor.trim() === "") {
+                resultado.textContent = "Ingresa números separados por coma";
+                resultado.className = "result false";
+                return;
+            }
+
+            try {
+                const arreglo = valor.split(",")
+                    .map(num => Number(num.trim()));
+
+                if (arreglo.some(isNaN)) {
+                    throw new Error("Entrada inválida");
+                }
+
+                const ordenado = reacomodo(arreglo);
+
+                resultado.textContent = ordenado.join(", ");
+                resultado.className = "result true";
+
+            } catch (error) {
+                resultado.textContent = "Solo se permiten números separados por coma";
+                resultado.className = "result false";
+            }
+
+        });
+    </script>
+
+</body>
+</html>
