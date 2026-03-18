@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="./css/act2.css">
+    <script src="./js/act2.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Carrito de Compras</h1>
+        <ul id="lista-carrito"></ul>
+        <p id="total"></p>
+        <button onclick="mostrarTotal()">Calcular Total</button>
+    </div>
+
+    <script>
+        // Ejemplo de carrito
+        const carrito = [
+            { nombre: "Laptop", precio: 12000 },
+            { nombre: "Mouse", precio: 500 },
+            { nombre: "Teclado", precio: 1500 }
+        ];
+
+        // Mostrar productos en la lista
+        const lista = document.getElementById("lista-carrito");
+        carrito.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = `${item.nombre} - $${item.precio}`;
+            lista.appendChild(li);
+        });
+
+        // Función para mostrar el total usando calcularTotal
+        function mostrarTotal() {
+            const total = calcularTotal(carrito);
+            document.getElementById("total").textContent = "Total: $" + total;
+        }
+    </script>
+</body>
+</html>
