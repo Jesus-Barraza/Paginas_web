@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "run": "node",
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,9 @@
   "type": "commonjs",
   "devDependencies": {
     "jest": "^30.3.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
   }
 }

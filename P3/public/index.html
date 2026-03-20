@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Petitions Interface</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Web Petitions Interface 🚀</h1>
+  </header>
+
+  <main>
+    <!-- GET /orrico -->
+    <section>
+      <h2>GET /orrico</h2>
+      <button onclick="callOrrico()">Call Orrico</button>
+      <div class="response" id="orricoResponse"></div>
+    </section>
+
+    <!-- GET /dagoberto -->
+    <section>
+      <h2>GET /dagoberto</h2>
+      <button onclick="callDagoberto()">Call Dagoberto</button>
+      <div class="response" id="dagobertoResponse"></div>
+    </section>
+
+    <!-- GET /bravito -->
+    <section>
+      <h2>GET /bravito</h2>
+      <label for="bravitoNombre">Nombre:</label>
+      <input type="text" id="bravitoNombre" placeholder="Ingresa un nombre">
+      <button onclick="callBravito()">Call Bravito</button>
+      <div class="response" id="bravitoResponse"></div>
+    </section>
+
+    <!-- POST /juanpis -->
+    <section>
+      <h2>POST /juanpis</h2>
+      <label for="juanpisNombre">Nombre:</label>
+      <input type="text" id="juanpisNombre" placeholder="Nombre del alumno">
+      <label for="juanpisEdad">Edad:</label>
+      <input type="number" id="juanpisEdad" placeholder="Edad del alumno">
+      <button onclick="callJuanpis()">Call Juanpis</button>
+      <div class="response" id="juanpisResponse"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Servidor jalando machin en localhost:3000</p>
+  </footer>
+
+  <script>
+    async function callOrrico() {
+      const res = await fetch("/orrico");
+      const text = await res.text();
+      document.getElementById("orricoResponse").innerText = text;
+    }
+
+    async function callDagoberto() {
+      const res = await fetch("/dagoberto");
+      const text = await res.text();
+      document.getElementById("dagobertoResponse").innerText = text;
+    }
+
+    async function callBravito() {
+      const nombre = document.getElementById("bravitoNombre").value;
+      const res = await fetch(`/bravito?nombre=${encodeURIComponent(nombre)}`);
+      const text = await res.text();
+      document.getElementById("bravitoResponse").innerText = text;
+    }
+
+    async function callJuanpis() {
+      const nombre = document.getElementById("juanpisNombre").value;
+      const edad = document.getElementById("juanpisEdad").value;
+      const res = await fetch("/juanpis", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, edad })
+      });
+      const text = await res.text();
+      document.getElementById("juanpisResponse").innerText = text;
+    }
+  </script>
+</body>
+</html>
