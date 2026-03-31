@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservación de Salas</title>
+  <link rel="stylesheet" href="./css/reservas.css"/>
+</head>
+<body>
+    <button id="logout">Cerrar sesión</button>
+    <h1>Reservaciones de Salas</h1>
+    <!-- resto del contenido -->
+
+  <h1>Reservaciones de Salas</h1>
+
+  <!-- Buscador -->
+  <div id="buscador">
+    <input type="text" id="searchGrupo" placeholder="Buscar por nombre de grupo...">
+    <button id="btnBuscar">Buscar</button>
+  </div>
+
+  <!-- Lista central -->
+  <div id="lista-reservas">
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Grupo</th>
+          <th>Fecha</th>
+          <th>Habitación</th>
+        </tr>
+      </thead>
+      <tbody id="reservas-body">
+        <!-- Filas dinámicas -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Botones inferiores -->
+  <div id="acciones">
+    <button id="btnAgregar">Agregar reserva</button>
+    <button id="btnActualizar" disabled>Actualizar reserva</button>
+    <button id="btnEliminar" disabled>Eliminar reserva</button>
+  </div>
+
+  <!-- Popup para agregar -->
+  <div class="popup" id="popup-agregar">
+    <div class="popup-content">
+      <h2>Nueva Reserva</h2>
+      <form>
+        <label for="nombre_grupo">Nombre del grupo:</label><br/>
+        <input type="text" id="nombre_grupo" required><br/><br/>
+        <label for="fecha">Fecha:</label><br/>
+        <input type="date" id="fecha" required><br/><br/>
+        <label for="habitacion">Habitación:</label><br/>
+        <input type="text" id="habitacion" required><br/><br/>
+      </form>
+      <button id="submitReserva">Guardar</button>
+      <button class="cancel" id="closeAgregar">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Popup para actualizar -->
+  <div class="popup" id="popup-actualizar">
+    <div class="popup-content">
+      <h2>Actualizar Reserva</h2>
+      <form>
+        <input type="hidden" id="update_id">
+        <label for="update_nombre">Nombre del grupo:</label><br/>
+        <input type="text" id="update_nombre" required><br/><br/>
+        <label for="update_fecha">Fecha:</label><br/>
+        <input type="date" id="update_fecha" required><br/><br/>
+        <label for="update_habitacion">Habitación:</label><br/>
+        <input type="text" id="update_habitacion" required><br/><br/>
+      </form>
+      <button id="submitUpdate">Actualizar</button>
+      <button class="cancel" id="closeUpdate">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Popup de confirmación para eliminar -->
+  <div class="popup" id="popup-eliminar">
+    <div class="popup-content">
+      <h2>Eliminar Reserva</h2>
+      <p>¿Seguro que deseas eliminar esta reserva?</p>
+      <input type="hidden" id="delete_id">
+      <button id="submitDelete">Sí, eliminar</button>
+      <button class="cancel" id="closeDelete">Cancelar</button>
+    </div>
+  </div>
+
+      <!-- Popup de mensajes -->
+    <div class="popup" id="popup-message">
+    <div class="popup-content">
+        <h2 id="message-title">Aviso</h2>
+        <p id="message-body"></p>
+        <button class="cancel" id="closeMessage">Cerrar</button>
+    </div>
+    </div>
+
+
+  <script src="./js/reservas.js"></script>
+</body>
+</html>

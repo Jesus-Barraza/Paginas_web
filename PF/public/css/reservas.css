@@ -1,0 +1,114 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Botones con colores distintos */
+#btnAgregar {
+  background-color: #4CAF50; /* verde */
+  color: white;
+}
+#btnAgregar:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+#btnActualizar {
+  background-color: #2196F3; /* azul */
+  color: white;
+}
+#btnActualizar:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+}
+#btnActualizar:hover:enabled {
+  background-color: #1976d2;
+  transform: scale(1.05);
+}
+
+#btnEliminar {
+  background-color: #f44336; /* rojo */
+  color: white;
+}
+#btnEliminar:disabled {
+  background-color: #e6a9a9;
+  cursor: not-allowed;
+}
+#btnEliminar:hover:enabled {
+  background-color: #d32f2f;
+  transform: scale(1.05);
+}
+#logout {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #ff5722; /* naranja fuerte */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+#logout:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+/* Fila seleccionada */
+tr.selected {
+  background-color: #e0f7fa; /* azul claro */
+  border: 2px solid #00acc1;
+}
+
+/* Popups */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  width: 350px;
+}

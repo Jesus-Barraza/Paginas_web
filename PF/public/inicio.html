@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Página de inicio</title>
+        <link rel="stylesheet" href="./css/sesiones.css"/>
+    </head>
+    <body>
+        <h1>Bienvenido</h1>
+        <button class="Login" id="Login">Iniciar sesión</button>
+        <button class="Register" id="Register">Registrarse</button>
+
+        <div class="popup" id="popup-register">
+            <div class="popup-content">
+                <h2>Registro</h2>
+                <form>
+                    <label for="nombre">Nombre:</label><br/>
+                    <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" maxlength="200" required><br/><br/>
+                    <label for="correo">Correo:</label><br/>
+                    <input type="text" id="correo" name="correo" placeholder="Escribe tu correo" maxlength="100" required><br/><br/>
+                    <label for="telefono">Teléfono:</label><br/>
+                    <input type="number" id="telefono" name="telefono" placeholder="Escribe tu teléfono aquí" maxlength="100" required><br/><br/>
+                    <label for="Contra">Contraseña:</label><br/>
+                    <input type="text" id="contrasena" name="contrasena" placeholder="Escribe tu contraseña aquí" required>
+                </form><br/><br/><br/>
+                <button class="Register" id="registerbtn">Registrarse</button>
+                <button class="cancel" id="closeRegist">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-login">
+            <div class="popup-content">
+                <h2>Inicio de sesión</h2>
+                <form>
+                    <label for="ident">Correo o teléfono:</label><br/>
+                    <input type="text" id="ident" name="ident" placeholder="Escribe tu correo o teléfono aquí" maxlength="100" required><br/><br/>
+                    <label for="Contra">Contraseña:</label><br/>
+                    <input type="text" id="contra" name="contra" placeholder="Escribe tu contraseña aquí" required>
+                </form><br/><br/><br/>
+                <button class="Login" id="loginbtn">Iniciar sesión</button>
+                <button class="cancel" id="closeLogin">Cancelar</button>
+            </div>
+        </div>
+
+        <div class="popup" id="popup-message">
+            <div class="popup-content">
+                <h2 id="message-title">Aviso</h2>
+                <p id="message-body"></p>
+                <button class="cancel" id="closeMessage">Cerrar</button>
+            </div>
+        </div>
+
+        <script src="./js/sesiones.js"></script>
+    </body>
+</html>
