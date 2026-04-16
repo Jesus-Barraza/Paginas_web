@@ -68,10 +68,13 @@ LoginRaR.addEventListener("click", async () => {
     });
 
     if (res.ok) {
-      window.location.href = "/reservas.html";
+      window.location.href = "/tabla";
     } else {
       const data = await res.text();
       showMessage("Error", data);
+      setTimeout(() => {
+        window.location.href = "/";
+      }, 1000);
     }
   } catch (err) {
     console.error(err);

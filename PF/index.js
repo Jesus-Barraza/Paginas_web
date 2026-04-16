@@ -146,6 +146,15 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './public/inicio.html'));
 });
 
+//La otra página
+app.get("/tabla", (req, res) => {
+    if (!req.session.usuario) {
+        return res.status(401).send("No autorizado")
+    } else {
+        res.sendFile(path.join(__dirname, "./public/reservas.html"))
+    }
+});
+
 //El servidor (para iniciar el servidor no pos si-)
 app.listen(3000, () => {
     console.log("Servidor jalando machin en localhost:3000")
